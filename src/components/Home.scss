@@ -4,14 +4,11 @@
   display: grid;
   grid: 1fr / 1fr;
   gap: 1.8rem;
+  margin-top: 3rem;
 
   &__heading {
     text-align: center;
     font-size: 3rem;
-  }
-
-  p {
-    font-size: 1.4rem;
   }
 
   strong {
@@ -22,7 +19,7 @@
   &__buttons {
     display: grid;
     grid: 1fr / 1fr 1fr;
-    gap: 1rem;
+    gap: 2rem;
     justify-items: space-around;
     width: 100%;
   }

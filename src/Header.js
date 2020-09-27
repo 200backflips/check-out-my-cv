@@ -20,7 +20,7 @@ const Header = () => {
     <div className="Header">
       <div className="Header__text">
         <h3>Fredrik Karlsson</h3>
-        <p>Fullstack JavaScript Developer</p>
+        <span>Fullstack JavaScript Developer</span>
       </div>
       <div className="Header__links">
         <p>home</p>

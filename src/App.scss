@@ -14,7 +14,7 @@
   &__bg-photo {
     position: fixed;
     z-index: -1;
-    object-fit: fill;
+    object-fit: cover;
   }
 
   &__container {
@@ -24,10 +24,19 @@
   }
 }
 
-@media only screen and (max-width: 80rem) {
+p {
+  font-size: $font-size-paragraph;
+}
+
+@media only screen and (max-width: 60rem) {
   .App {
     &__container {
       width: 100%;
+      padding: 0 1.5rem;
+    }
+
+    p {
+      font-size: $font-size-paragraph * 1.2;
     }
   }
 }
