@@ -1,0 +1,28 @@
+@import '../variables.scss';
+
+.Home {
+  display: grid;
+  grid: 1fr / 1fr;
+  gap: 1.5rem;
+
+  &__heading {
+    font-size: $font-size-heading;
+    text-align: center;
+  }
+
+  p {
+    font-size: $font-size-paragraph;
+  }
+
+  strong {
+    color: $chardonnay;
+    cursor: pointer;
+  }
+
+  &__buttons {
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+    gap: 1rem;
+    justify-items: space-around;
+  }
+}

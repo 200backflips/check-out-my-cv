@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+.Header {
+  position: relative;
+
+  &__text {
+    display: grid;
+    grid: 1fr / 1fr;
+    justify-items: center;
+    margin: 2rem;
+
+    h3 {
+      font-size: $font-size-heading;
+      color: $chardonnay;
+    }
+
+    p {
+      font-size: $font-size-paragraph;
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid: 1fr / repeat(6, 1fr);
+    justify-items: center;
+
+    p {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  svg {
+    position: absolute;
+    right: -3rem;
+  }
+
+  &__warning {
+    position: absolute;
+    top: 15rem;
+    right: -15rem;
+    color: $chardonnay;
+    font-size: 2rem;
+  }
+}

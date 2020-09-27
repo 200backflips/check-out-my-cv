@@ -1,0 +1,33 @@
+@import './variables.scss';
+
+.App {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: $whisper;
+  background: $background-color;
+
+  &__bg-photo {
+    position: fixed;
+    z-index: -1;
+    object-fit: fill;
+  }
+
+  &__container {
+    z-index: 1;
+    max-width: 64rem;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 80rem) {
+  .App {
+    &__container {
+      width: 100%;
+    }
+  }
+}

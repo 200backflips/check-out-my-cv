@@ -1,0 +1,17 @@
+@import '../variables.scss';
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.8rem;
+  background: $horizon;
+  font-size: 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: ease-in-out 170ms;
+}
+.Button:hover {
+  opacity: 0.8;
+}
