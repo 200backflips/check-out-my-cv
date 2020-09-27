@@ -28,7 +28,10 @@ const Header = () => {
         <p>cv</p>
         <p>contact</p>
         <p>about</p>
-        <p>•</p>
+        <label className="Header__switch">
+          <input type="checkbox" />
+          <span className="Header__slider Header__slider-round"></span>
+        </label>
       </div>
       {arrow}
       <span className="Header__warning">Do not press!</span>

@@ -7,15 +7,15 @@
     display: grid;
     grid: 1fr / 1fr;
     justify-items: center;
-    margin: 2rem;
+    margin: 2rem 0 4rem 0;
 
     h3 {
-      font-size: $font-size-heading;
+      font-size: 3.9rem;
       color: $chardonnay;
     }
 
     p {
-      font-size: $font-size-paragraph;
+      font-size: 1.6rem;
     }
   }
 
@@ -23,11 +23,65 @@
     display: grid;
     grid: 1fr / repeat(6, 1fr);
     justify-items: center;
+    align-items: center;
 
     p {
-      font-size: 2rem;
+      font-size: 2.2rem;
       cursor: pointer;
     }
+  }
+
+  &__switch {
+    position: relative;
+    margin: 0.5em;
+    width: 37px;
+    height: 20px;
+  }
+  &__switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #858585;
+    transition: 0.4s;
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: 16px;
+      width: 16px;
+      left: 3px;
+      bottom: 2.5px;
+      background: $whisper;
+      transition: 0.4s;
+    }
+
+    &-round {
+      border-radius: 23px;
+
+      &:before {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  input:checked + &__slider {
+    background: $chardonnay;
+  }
+  input:focus + &__slider {
+    box-shadow: 0 0 1px $chardonnay;
+  }
+
+  input:checked + &__slider:before {
+    transform: translateX(14px);
   }
 
   svg {
@@ -37,7 +91,7 @@
 
   &__warning {
     position: absolute;
-    top: 15rem;
+    top: 17rem;
     right: -15rem;
     color: $chardonnay;
     font-size: 2rem;
