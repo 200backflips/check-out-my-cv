@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import '../../variables.scss';
 
 .Home {
   height: 100%;
@@ -10,11 +10,13 @@
   }
 
   &__heading {
+    margin-top: 6rem;
     font-size: 3.2rem;
     font-weight: 400;
   }
 
-  strong {
+  &__contact {
+    text-decoration: none;
     font-weight: 400;
     color: $chardonnay;
     cursor: pointer;

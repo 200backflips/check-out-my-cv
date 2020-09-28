@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.scss';
-import Button from '../elements/Button';
+import Button from '../../elements/Button';
 
 const Home = () => {
   const heading = 'Functional and user-friendly web apps';
@@ -11,7 +11,11 @@ const Home = () => {
       design. I’m based in Stockholm and currently available for full-time,
       part-time, remote or freelance work. If you are looking to hire a
       passionate developer with a deep knowledge of JavaScript, don’t hesitate
-      to <strong>contact</strong> me.
+      to{' '}
+      <a href="#Contact" className="Home__contact">
+        contact
+      </a>{' '}
+      me.
     </p>
   );
 
