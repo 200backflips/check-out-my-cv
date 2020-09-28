@@ -5,13 +5,17 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0.8rem;
+  padding: 1.2rem 0;
   background: $horizon;
   font-size: 2rem;
-  border-radius: 20px;
+  font-weight: 600;
+  border-radius: 3rem;
   cursor: pointer;
   transition: ease-in-out 170ms;
 }
-.Button:hover {
-  opacity: 0.8;
+
+@media only screen and (min-width: 50rem) {
+  .Button:hover {
+    opacity: 0.8;
+  }
 }

@@ -2,21 +2,22 @@
 
 .Header {
   position: relative;
-  margin-bottom: 3rem;
+  height: 25%;
 
   &__text {
     display: grid;
     grid: 1fr / 1fr;
     justify-items: center;
-    margin: 2rem 0 4rem 0;
+    padding: 4rem 0;
 
     h3 {
-      font-size: 3.9rem;
+      font-size: 4.1rem;
+      font-weight: 400;
       color: $chardonnay;
     }
 
     span {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -26,10 +27,29 @@
     justify-items: center;
     align-items: center;
 
-    p {
+    a {
+      color: $whisper;
       font-size: 2.2rem;
+      font-weight: 400;
+      text-decoration: none;
       cursor: pointer;
     }
+  }
+
+  svg {
+    position: absolute;
+    right: -4rem;
+    top: 18rem;
+  }
+
+  &__warning {
+    position: absolute;
+    top: 23rem;
+    right: -16.2rem;
+    color: $chardonnay;
+    font-size: 2rem;
+    font-style: italic;
+    pointer-events: none;
   }
 
   &__switch {
@@ -84,25 +104,9 @@
   input:checked + &__slider:before {
     transform: translateX(14px);
   }
-
-  svg {
-    position: absolute;
-    right: -4rem;
-    top: 14rem;
-  }
-
-  &__warning {
-    position: absolute;
-    top: 19rem;
-    right: -16.2rem;
-    color: $chardonnay;
-    font-size: 2rem;
-    font-style: italic;
-    pointer-events: none;
-  }
 }
 
-@media only screen and (max-width: 60rem) {
+@media only screen and (max-width: 50rem) {
   .Header {
     &__links {
       grid: 1fr / repeat(3, 1fr);

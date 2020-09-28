@@ -1,17 +1,21 @@
 @import '../variables.scss';
 
 .Home {
-  display: grid;
-  grid: 1fr / 1fr;
-  gap: 1.8rem;
-  margin-top: 3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    margin: 0.9rem 0;
+  }
 
   &__heading {
-    text-align: center;
-    font-size: 3rem;
+    font-size: 3.2rem;
+    font-weight: 400;
   }
 
   strong {
+    font-weight: 400;
     color: $chardonnay;
     cursor: pointer;
   }
@@ -19,7 +23,7 @@
   &__buttons {
     display: grid;
     grid: 1fr / 1fr 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
     justify-items: space-around;
     width: 100%;
   }

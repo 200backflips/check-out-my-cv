@@ -16,7 +16,7 @@ const Home = () => {
   );
 
   return (
-    <div className="Home">
+    <div className="Home" id="Home">
       <span className="Home__heading">{heading}</span>
 
       {introduction}

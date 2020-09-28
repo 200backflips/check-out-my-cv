@@ -23,11 +23,11 @@ const Header = () => {
         <span>Fullstack JavaScript Developer</span>
       </div>
       <div className="Header__links">
-        <p>home</p>
-        <p>porfolio</p>
-        <p>cv</p>
-        <p>contact</p>
-        <p>about</p>
+        <a href="#Home">home</a>
+        <a href="#Portfolio">portfolio</a>
+        <a href="#CV">cv</a>
+        <a href="#Contact">contact</a>
+        <a href="#About">about</a>
         <label className="Header__switch">
           <input type="checkbox" />
           <span className="Header__slider Header__slider-round"></span>
