@@ -17,3 +17,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
