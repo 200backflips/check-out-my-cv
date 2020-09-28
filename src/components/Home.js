@@ -21,8 +21,8 @@ const Home = () => {
 
       {introduction}
       <div className="Home__buttons">
-        <Button buttonText="portfolio" />
-        <Button buttonText="cv" />
+        <Button buttonText="portfolio" linkTo="#Portfolio" />
+        <Button buttonText="cv" linkTo="#CV" />
       </div>
     </div>
   );

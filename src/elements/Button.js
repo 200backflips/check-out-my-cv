@@ -1,11 +1,11 @@
 import React from 'react';
 import './Button.scss';
 
-const Button = ({ buttonText = '', onClick = () => null }) => {
+const Button = ({ buttonText = '', linkTo = '#' }) => {
   return (
-    <div className="Button" onClick={onClick}>
+    <a href={linkTo} className="Button">
       {buttonText}
-    </div>
+    </a>
   );
 };
 
