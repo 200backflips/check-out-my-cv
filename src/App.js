@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+
 import Content from './Content';
 import Header from './Header';
 

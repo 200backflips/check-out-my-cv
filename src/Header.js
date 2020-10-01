@@ -4,14 +4,14 @@ import './Header.scss';
 const Header = () => {
   const arrow = (
     <svg
-      width="74"
-      height="57"
-      viewBox="0 0 74 57"
+      width="95"
+      height="74"
+      viewBox="0 0 95 74"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M4 23.5C9.50536 15.6012 8.50616 10.5949 2 1M2 1C16.1976 5.7519 21.3291 6.10891 26.5 3.5M2 1C29.1578 27.1074 44.5604 40.372 73 56.5"
+        d="M90.4085 43.8108C83.2747 54.0579 84.5695 60.5525 93 73M93 73C74.6031 66.8354 67.9538 66.3722 61.2535 69.7568M93 73C57.8097 39.1309 37.8513 21.9228 0.999995 0.999996"
         stroke="#FFC979"
       />
     </svg>
@@ -33,8 +33,8 @@ const Header = () => {
           <span className="Header__slider Header__slider-round"></span>
         </label>
       </div>
-      {arrow}
       <span className="Header__warning">Do not press!</span>
+      {arrow}
     </div>
   );
 };
