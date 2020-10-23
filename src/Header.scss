@@ -4,16 +4,17 @@
   position: relative;
   display: grid;
   grid: 1fr / 2fr 4fr;
-  padding-bottom: 4rem;
-  font-size: 3rem;
+  height: 25%;
+  padding-bottom: 2rem;
+  font-size: 2rem;
 
   &__text {
     display: grid;
     grid: 1fr / 1fr;
-    justify-items: start;
+    align-items: end;
 
     h3 {
-      font-size: 6rem;
+      font-size: 4rem;
       font-weight: 300;
       color: $chardonnay;
     }
@@ -39,14 +40,14 @@
 
   svg {
     position: absolute;
-    right: 12rem;
-    top: -1rem;
+    right: 8.5rem;
+    top: 6rem;
   }
 
   &__warning {
     position: absolute;
-    top: -4rem;
-    right: 22.5rem;
+    top: 4rem;
+    right: 18.5rem;
     color: $chardonnay;
     font-style: italic;
     pointer-events: none;
@@ -54,8 +55,8 @@
 
   &__switch {
     position: relative;
-    width: 4.5rem;
-    height: 2.8rem;
+    width: 4rem;
+    height: 2.3rem;
     -webkit-tap-highlight-color: transparent;
   }
   &__switch input {
@@ -77,8 +78,8 @@
     &:before {
       position: absolute;
       content: '';
-      height: 2.5rem;
-      width: 2.5rem;
+      height: 2rem;
+      width: 2rem;
       left: 0.2rem;
       bottom: 0.16rem;
       background: $whisper;
