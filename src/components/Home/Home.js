@@ -26,6 +26,7 @@ const Home = () => {
 
   return (
     <div className="Home" id="Home">
+<<<<<<< HEAD
       <div className="Home__left-item">
         <div className="Home__title">
           <h3>Fredrik Karlsson</h3>
@@ -58,6 +59,14 @@ const Home = () => {
         <div className="Home__button-wrapper">
           <Button buttonText="portfolio" linkTo="#Portfolio" />
         </div>
+=======
+      <span className="Home__heading">{heading}</span>
+
+      {introduction}
+      <div className="Home__buttons">
+        <Button buttonText="portfolio" linkTo="#Portfolio" />
+        <Button buttonText="cv" linkTo="#CV" />
+>>>>>>> parent of c0aac4e... revamp styling
       </div>
     </div>
   );
