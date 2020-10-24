@@ -8,8 +8,6 @@ import about from '../../svg icons/info-outline.svg';
 import contact from '../../svg icons/contact.svg';
 
 const Home = () => {
-  const heading = 'Functional and user-friendly web apps';
-
   const introduction = (
     <p>
       I’m a web developer with a heavy focus on frontend and user-friendly
@@ -26,7 +24,6 @@ const Home = () => {
 
   return (
     <div className="Home" id="Home">
-<<<<<<< HEAD
       <div className="Home__left-item">
         <div className="Home__title">
           <h3>Fredrik Karlsson</h3>
@@ -49,7 +46,10 @@ const Home = () => {
             <img src={cv} alt="cv" />
             cv
           </a>
-          <a href="#About">about</a>
+          <a href="#About">
+            <img src={about} alt="about" />
+            about
+          </a>
           <a href="#Contact">
             <img src={contact} alt="contact" />
             contact
@@ -59,14 +59,6 @@ const Home = () => {
         <div className="Home__button-wrapper">
           <Button buttonText="portfolio" linkTo="#Portfolio" />
         </div>
-=======
-      <span className="Home__heading">{heading}</span>
-
-      {introduction}
-      <div className="Home__buttons">
-        <Button buttonText="portfolio" linkTo="#Portfolio" />
-        <Button buttonText="cv" linkTo="#CV" />
->>>>>>> parent of c0aac4e... revamp styling
       </div>
     </div>
   );

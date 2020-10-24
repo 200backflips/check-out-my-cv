@@ -1,7 +1,6 @@
 @import '../../variables.scss';
 
 .Home {
-<<<<<<< HEAD
   height: 150vh;
   display: grid;
   grid: 1fr / 1fr 1fr;
@@ -91,20 +90,12 @@
       text-align: end;
       font-size: 2.7rem;
     }
-=======
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  & > * {
-    margin: 0.9rem 0;
   }
 
   &__heading {
     margin-top: 6rem;
     font-size: 3.2rem;
     font-weight: 400;
->>>>>>> parent of c0aac4e... revamp styling
   }
 
   &__contact {
@@ -114,16 +105,7 @@
     cursor: pointer;
   }
 
-<<<<<<< HEAD
   &__button-wrapper {
     width: 50%;
-=======
-  &__buttons {
-    display: grid;
-    grid: 1fr / 1fr 1fr;
-    gap: 2.5rem;
-    justify-items: space-around;
-    width: 100%;
->>>>>>> parent of c0aac4e... revamp styling
   }
 }
