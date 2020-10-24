@@ -1,94 +1,30 @@
 @import '../../variables.scss';
 
 .Home {
-  height: 150vh;
+  height: 100%;
   display: grid;
-  grid: 1fr / 1fr 1fr;
-
-  &__left-item {
-    background: $horizon;
-    padding: 5rem;
-  }
-
-  &__right-item {
-    position: relative;
-    background: $background-color;
-
-    position: relative;
-
-    img {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-  }
-
-  &__title {
-    display: grid;
-    grid: 1fr / 1fr;
-    align-items: end;
-    font-size: 2rem;
-
-    h3 {
-      font-size: 4rem;
-      color: $chardonnay;
-      font-weight: 400;
-    }
-  }
+  grid: 1fr 2fr / 1fr 1fr;
 
   &__heading {
-    p {
-      font-size: 6rem;
-      font-weight: 400;
-    }
-  }
+    font-size: 8.5rem;
+    // font-weight: 400;
 
-  &__links {
-    display: grid;
-    grid: 1fr 1fr / 1fr 1fr;
-
-    a {
-      display: grid;
-      grid: 1fr / 1fr;
-      gap: 1rem;
-      justify-items: center;
-      padding: 5rem;
-      margin: 0.1rem;
-      font-size: 2.7rem;
-      color: $whisper;
-      text-decoration: none;
-      transition: ease-in-out 100ms;
-
-      img {
-        width: 6rem;
-      }
-
-      &:hover {
-        opacity: 0.6;
-      }
-
-      &:nth-of-type(1) {
-        background: #605a5a;
-      }
-      &:nth-of-type(2) {
-        background: #625c5c;
-      }
-      &:nth-of-type(3) {
-        background: #5b5656;
-      }
-      &:nth-of-type(4) {
-        background: #5f5858;
-      }
+    &:first-of-type {
+      grid-column-start: span 2;
+      align-self: end;
     }
   }
 
   &__introduction {
+    display: grid;
+    grid: 1fr 1fr / 1fr;
+    align-items: start;
+    gap: 6rem;
+
     p {
       padding-top: 1rem;
       text-align: end;
-      font-size: 2.7rem;
+      font-size: 3.8rem;
     }
   }
 
@@ -99,7 +35,11 @@
     cursor: pointer;
   }
 
-  &__button-wrapper {
-    width: 50%;
+  &__buttons {
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+    gap: 4rem;
+    justify-items: space-around;
+    width: 100%;
   }
 }

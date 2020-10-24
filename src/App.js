@@ -1,19 +1,17 @@
 import React from 'react';
 import './App.scss';
-import Home from './components/Home/Home';
-import Portfolio from './components/Portfolio/Portfolio';
-import CV from './components/CV/CV';
-import About from './components/About/About';
-import Contact from './components/Contact/Contact';
+
+import Content from './Content';
+import Header from './Header';
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      {/* <Portfolio />
-      <CV />
-      <About />
-      <Contact /> */}
+      <img src="/bg.jpg" className="App__bg-photo" alt="background" />
+      <div className="App__container">
+        <Header />
+        <Content />
+      </div>
     </div>
   );
 }

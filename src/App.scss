@@ -9,6 +9,7 @@
   height: 100%;
   width: 100%;
   color: $whisper;
+  background: $background-color;
 
   &__bg-photo {
     position: fixed;
@@ -19,18 +20,12 @@
   &__container {
     z-index: 1;
     height: 100vh;
-    width: 80%;
+    padding: 12rem;
   }
 }
 
-.Content {
-  height: 200vh;
-  display: grid;
-  grid: 1fr / 1fr 1fr;
-}
-
 p {
-  font-size: $paragraph-size;
+  font-size: $font-size-paragraph;
 }
 
 @media only screen and (max-width: 50rem) {
