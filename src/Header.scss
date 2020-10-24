@@ -2,24 +2,22 @@
 
 .Header {
   position: relative;
-  display: grid;
-  grid: 1fr / 2fr 4fr;
-  padding-bottom: 4rem;
-  font-size: 3rem;
+  height: 25%;
 
   &__text {
     display: grid;
     grid: 1fr / 1fr;
-    justify-items: start;
+    justify-items: center;
+    padding: 4rem 0;
 
     h3 {
-      font-size: 6rem;
-      font-weight: 300;
+      font-size: 4.1rem;
+      font-weight: 400;
       color: $chardonnay;
     }
 
     span {
-      opacity: 0.7;
+      font-size: 1.8rem;
     }
   }
 
@@ -27,10 +25,11 @@
     display: grid;
     grid: 1fr / repeat(6, 1fr);
     justify-items: center;
-    align-items: end;
+    align-items: center;
 
     a {
       color: $whisper;
+      font-size: 2.2rem;
       font-weight: 400;
       text-decoration: none;
       cursor: pointer;
@@ -39,23 +38,25 @@
 
   svg {
     position: absolute;
-    right: 12rem;
-    top: -1rem;
+    right: -4rem;
+    top: 18rem;
   }
 
   &__warning {
     position: absolute;
-    top: -4rem;
-    right: 22.5rem;
+    top: 23rem;
+    right: -16.2rem;
     color: $chardonnay;
+    font-size: 2rem;
     font-style: italic;
     pointer-events: none;
   }
 
   &__switch {
     position: relative;
-    width: 4.5rem;
-    height: 2.8rem;
+    margin: 0.5em;
+    width: 37px;
+    height: 20px;
     -webkit-tap-highlight-color: transparent;
   }
   &__switch input {
@@ -77,19 +78,19 @@
     &:before {
       position: absolute;
       content: '';
-      height: 2.5rem;
-      width: 2.5rem;
-      left: 0.2rem;
-      bottom: 0.16rem;
+      height: 16px;
+      width: 16px;
+      left: 3px;
+      bottom: 2.5px;
       background: $whisper;
       transition: 0.4s;
     }
 
     &-round {
-      border-radius: 2.4rem;
+      border-radius: 23px;
 
       &:before {
-        border-radius: 60%;
+        border-radius: 50%;
       }
     }
   }
@@ -102,7 +103,7 @@
   }
 
   input:checked + &__slider:before {
-    transform: translateX(1.5rem);
+    transform: translateX(14px);
   }
 }
 

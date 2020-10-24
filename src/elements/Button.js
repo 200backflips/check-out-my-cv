@@ -1,9 +1,9 @@
 import React from 'react';
 import './Button.scss';
 
-const Button = ({ buttonText = '', linkTo = '#', color = '#62929a' }) => {
+const Button = ({ buttonText = '', linkTo = '#' }) => {
   return (
-    <a href={linkTo} className="Button" style={{ backgroundColor: color }}>
+    <a href={linkTo} className="Button">
       {buttonText}
     </a>
   );
