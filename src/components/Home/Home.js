@@ -44,10 +44,7 @@ const Home = () => {
             <img src={cv} alt="cv" />
             cv
           </a>
-          <a href="#About">
-            <img src={about} alt="about" />
-            about
-          </a>
+          <a href="#About">about</a>
           <a href="#Contact">
             <img src={contact} alt="contact" />
             contact
