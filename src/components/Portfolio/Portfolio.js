@@ -1,6 +1,12 @@
 import React from 'react';
 import './Portfolio.scss';
-import Button from '../../elements/Button';
+import Button from '../../elements/Button/Button';
+import Card from '../../elements/Card/Card';
+
+import bookingmate from '../../projects/bookingmate.png';
+import wayofnorris from '../../projects/wayofnorris.png';
+import jakobfroden from '../../projects/jakobfroden.png';
+
 import { ReactComponent as Github } from '../../svg icons/github.svg';
 import { ReactComponent as Monster1 } from '../../monster doodles/monster1.svg';
 import { ReactComponent as Monster3 } from '../../monster doodles/monster3.svg';
@@ -8,24 +14,50 @@ import { ReactComponent as Monster4 } from '../../monster doodles/monster4.svg';
 import { ReactComponent as Line } from '../../monster doodles/line5.svg';
 
 const Portfolio = () => {
+  const projects = [
+    {
+      img: bookingmate,
+      project: 'Lil booking Mate',
+      tech: 'Vue, Vuex',
+      description: 'A "hotel style" booking app',
+      link: 'https://bookingmate.netlify.app/',
+    },
+    {
+      img: wayofnorris,
+      project: 'The Way of The Norris',
+      tech: 'React, Sass',
+      description: 'UI for the chucknorris.io API',
+      link: 'https://wayofnorris.netlify.app/',
+    },
+    {
+      img: jakobfroden,
+      project: 'Jakob Frödén',
+      tech: 'Svelte',
+      description: 'A motion graphics design portfolio',
+      link: 'https://jakobfroden.netlify.app/',
+    },
+  ];
+
   return (
     <div className="Portfolio">
       <div className="Portfolio__left-item">
         <img src="/bgphoto.jpg" alt="background" />
         <div className="Portfolio__left-container" id="Portfolio">
           <h2>Portfolio</h2>
-          <p>
-            Check out a few of the projects that I’ve deployed. If you’re
-            interested in the code, it’s available on my Github profile along
-            with about a dozen other repositories.
-          </p>
-          <div className="Portfolio__button-wrapper">
-            <Button
-              buttonText="see all my repos"
-              linkTo="https://github.com/200backflips"
-              openInNewTab={true}
-              icon={<Github />}
-            />
+          <div>
+            <p>
+              Check out a few of the projects that I’ve deployed. If you’re
+              interested in the code, it’s available on my Github profile along
+              with about a dozen other repositories.
+            </p>
+            <div className="Portfolio__button-wrapper">
+              <Button
+                buttonText="see all my repos"
+                linkTo="https://github.com/200backflips"
+                openInNewTab={true}
+                icon={<Github />}
+              />
+            </div>
           </div>
           <div className="Portfolio__monster-doodles">
             <Monster1 />
@@ -48,9 +80,7 @@ const Portfolio = () => {
             </p>
           </div>
           <div className="Portfolio__links">
-            <div></div>
-            <div></div>
-            <div></div>
+            <Card projects={projects} />
           </div>
         </div>
       </div>

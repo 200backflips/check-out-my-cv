@@ -35,6 +35,7 @@
   &__left-container,
   &__right-container {
     display: grid;
+    grid: 0.75fr 1fr 2.5fr / 1fr;
     height: 100vh;
     padding: 5rem;
   }
@@ -43,13 +44,7 @@
     background: $horizon;
   }
 
-  &__left-container {
-    grid: 1fr 0.5fr 2.5fr / 1fr;
-  }
-
   &__right-container {
-    grid: 1fr 1fr 2fr / 1fr;
-
     p {
       font-size: 2.5rem;
     }
@@ -57,6 +52,7 @@
 
   &__button-wrapper {
     width: 40%;
+    margin-top: 2rem;
   }
 
   &__login-credentials {
@@ -67,15 +63,8 @@
 
   &__links {
     display: grid;
-    grid: 1fr 1fr / 1fr 2fr;
+    grid: 0.25fr 0.25fr / 1fr 2fr;
     gap: 1rem;
-
-    div {
-      height: 25rem;
-      width: 40rem;
-      border-radius: 1rem;
-      background: black;
-    }
   }
 
   &__monster-doodles {
@@ -87,11 +76,11 @@
       opacity: 0.7;
 
       &:nth-of-type(1) {
-        bottom: 5rem;
+        bottom: 7rem;
         right: 5rem;
       }
       &:nth-of-type(2) {
-        bottom: 7rem;
+        bottom: 9rem;
         left: 5rem;
       }
       &:nth-of-type(3) {
@@ -99,7 +88,7 @@
         left: 40rem;
       }
       &:nth-of-type(4) {
-        bottom: 0;
+        bottom: 2rem;
         fill: none;
       }
     }

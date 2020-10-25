@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.scss';
-import Button from '../../elements/Button';
+import Button from '../../elements/Button/Button';
 
 import { ReactComponent as Portfolio } from '../../svg icons/portfolio-outline.svg';
 import { ReactComponent as PortfolioFill } from '../../svg icons/portfolio-fill.svg';

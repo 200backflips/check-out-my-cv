@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import '../../variables.scss';
 
 .Button {
   position: relative;
@@ -6,15 +6,16 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 1.2rem 0;
+  padding: 1rem 0;
   background: $horizon;
   text-decoration: none;
   color: $whisper;
   font-size: 2.5rem;
   font-weight: 600;
+  border: 0.3rem solid $horizon;
   border-radius: 3rem;
   cursor: pointer;
-  transition: ease-in-out 170ms;
+  transition: ease-in-out 100ms;
 
   svg {
     position: absolute;
@@ -22,11 +23,17 @@
     width: 2.6rem;
     height: 2.6rem;
     fill: $whisper;
+    transition: ease-in-out 100ms;
   }
 }
 
 @media only screen and (min-width: 50rem) {
   .Button:hover {
-    opacity: 0.8;
+    color: $horizon;
+    background: transparent;
+
+    svg {
+      fill: $horizon;
+    }
   }
 }
