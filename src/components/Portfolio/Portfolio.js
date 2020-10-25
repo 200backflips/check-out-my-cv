@@ -76,7 +76,7 @@ const Portfolio = () => {
               <strong>username:</strong> test@test.com
             </p>
             <p>
-              <strong>email:</strong> secret
+              <strong>password:</strong> secret
             </p>
           </div>
           <div className="Portfolio__links">
