@@ -1,5 +1,107 @@
 @import '../../variables.scss';
 
 .Portfolio {
-  height: 100%;
+  display: grid;
+  grid: 1fr / 1fr 1fr;
+  height: 200vh;
+
+  p {
+    font-size: $paragraph-size;
+  }
+
+  strong {
+    color: $chardonnay;
+  }
+
+  &__left-item,
+  &__right-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__left-item {
+    position: relative;
+
+    img {
+      position: absolute;
+      height: 100%;
+      width: 200%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+
+  &__left-container,
+  &__right-container {
+    display: grid;
+    height: 100vh;
+    padding: 5rem;
+  }
+
+  &__right-item {
+    background: $horizon;
+  }
+
+  &__left-container {
+    grid: 1fr 0.5fr 2.5fr / 1fr;
+  }
+
+  &__right-container {
+    grid: 1fr 1fr 2fr / 1fr;
+
+    p {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__button-wrapper {
+    width: 40%;
+  }
+
+  &__login-credentials {
+    * {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid: 1fr 1fr / 1fr 2fr;
+    gap: 1rem;
+
+    div {
+      height: 25rem;
+      width: 40rem;
+      border-radius: 1rem;
+      background: black;
+    }
+  }
+
+  &__monster-doodles {
+    position: relative;
+
+    svg {
+      position: absolute;
+      fill: #ffffff;
+      opacity: 0.7;
+
+      &:nth-of-type(1) {
+        bottom: 5rem;
+        right: 5rem;
+      }
+      &:nth-of-type(2) {
+        bottom: 7rem;
+        left: 5rem;
+      }
+      &:nth-of-type(3) {
+        bottom: 30rem;
+        left: 40rem;
+      }
+      &:nth-of-type(4) {
+        bottom: 0;
+        fill: none;
+      }
+    }
+  }
 }

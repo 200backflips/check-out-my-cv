@@ -1,6 +1,7 @@
 @import '../variables.scss';
 
 .Button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,11 +10,19 @@
   background: $horizon;
   text-decoration: none;
   color: $whisper;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   border-radius: 3rem;
   cursor: pointer;
   transition: ease-in-out 170ms;
+
+  svg {
+    position: absolute;
+    left: 1.5rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    fill: $whisper;
+  }
 }
 
 @media only screen and (min-width: 50rem) {

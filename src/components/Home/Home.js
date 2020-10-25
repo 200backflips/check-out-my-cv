@@ -2,31 +2,18 @@ import React from 'react';
 import './Home.scss';
 import Button from '../../elements/Button';
 
-import portfolio from '../../svg icons/portfolio-outline.svg';
-import cv from '../../svg icons/cv.svg';
-import about from '../../svg icons/info-outline.svg';
-import contact from '../../svg icons/contact.svg';
+import { ReactComponent as Portfolio } from '../../svg icons/portfolio-outline.svg';
+import { ReactComponent as PortfolioFill } from '../../svg icons/portfolio-fill.svg';
+import { ReactComponent as CV } from '../../svg icons/cv.svg';
+import { ReactComponent as About } from '../../svg icons/info-outline.svg';
+import { ReactComponent as Contact } from '../../svg icons/contact.svg';
 
 const Home = () => {
-  const introduction = (
-    <p>
-      I’m a web developer with a heavy focus on frontend and user-friendly
-      design. I’m based in Stockholm and currently available for full-time,
-      part-time, remote or freelance work. If you are looking to hire a
-      passionate developer with a deep knowledge of JavaScript, don’t hesitate
-      to{' '}
-      <a href="#Contact" className="Home__contact">
-        contact
-      </a>{' '}
-      me.
-    </p>
-  );
-
   return (
     <div className="Home" id="Home">
       <div className="Home__left-item">
         <div className="Home__title">
-          <h3>Fredrik Karlsson</h3>
+          <h2>Fredrik Karlsson</h2>
           <span>Fullstack JavaScript Developer</span>
         </div>
         <div className="Home__heading">
@@ -39,25 +26,39 @@ const Home = () => {
         <img src="/bgphoto.jpg" alt="background" />
         <div className="Home__links">
           <a href="#Portfolio">
-            <img src={portfolio} alt="portfolio" />
+            <Portfolio />
             portfolio
           </a>
           <a href="#CV">
-            <img src={cv} alt="cv" />
+            <CV />
             cv
           </a>
           <a href="#About">
-            <img src={about} alt="about" />
+            <About />
             about
           </a>
           <a href="#Contact">
-            <img src={contact} alt="contact" />
+            <Contact />
             contact
           </a>
         </div>
-        <div className="Home__introduction">{introduction}</div>
-        <div className="Home__button-wrapper">
-          <Button buttonText="portfolio" linkTo="#Portfolio" />
+        <div className="Home__introduction">
+          <p>
+            I’m a web developer with a focus on frontend and user-friendly
+            design. If you are looking to hire a passionate developer with a
+            deep knowledge of JavaScript, don’t hesitate to{' '}
+            <a href="#Contact" className="Home__contact">
+              contact
+            </a>{' '}
+            me.
+          </p>
+          <div className="Home__button-wrapper">
+            <Button
+              buttonText="portfolio"
+              linkTo="#Portfolio"
+              icon={<PortfolioFill />}
+            />
+          </div>
         </div>
       </div>
     </div>
