@@ -1,6 +1,6 @@
 import React from 'react';
 import './CV.scss';
-
+import { ReactComponent as Monster } from '../../monster doodles/monster2.svg';
 import TitleWithLabel from '../../elements/TitleWithLabel/TitleWithLabel';
 
 const CV = () => {
@@ -50,6 +50,7 @@ const CV = () => {
       </div>
       <div className="CV__right-item">
         <img src="/bgphoto.jpg" alt="background" />
+        <Monster />
       </div>
     </div>
   );

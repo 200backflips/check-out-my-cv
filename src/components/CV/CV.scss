@@ -43,6 +43,13 @@
       object-fit: cover;
       z-index: -1;
     }
+
+    svg {
+      position: absolute;
+      bottom: 58rem;
+      right: 20rem;
+      fill: $whisper;
+    }
   }
 
   &__entries {
