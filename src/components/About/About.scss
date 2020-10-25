@@ -1,5 +1,37 @@
 @import '../../variables.scss';
 
 .About {
-  height: 100%;
+  display: grid;
+  grid: 1fr / 1fr 1fr;
+  height: 200vh;
+
+  &__left-item,
+  &__right-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__left-item {
+    position: relative;
+
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+
+  &__right-item {
+    background: $horizon;
+  }
+
+  &__left-container,
+  &__right-container {
+    height: 100vh;
+    padding: 5rem;
+  }
 }

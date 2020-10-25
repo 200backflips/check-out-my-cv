@@ -17,7 +17,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body,
+textarea {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }

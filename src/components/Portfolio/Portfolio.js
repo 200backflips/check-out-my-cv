@@ -1,6 +1,6 @@
 import React from 'react';
 import './Portfolio.scss';
-import Button from '../../elements/Button/Button';
+import { Button } from '../../elements/Buttons/Buttons';
 import Card from '../../elements/Card/Card';
 
 import bookingmate from '../../projects/bookingmate.png';
@@ -52,7 +52,7 @@ const Portfolio = () => {
             </p>
             <div className="Portfolio__button-wrapper">
               <Button
-                buttonText="see all my repos"
+                title="see all my repos"
                 linkTo="https://github.com/200backflips"
                 openInNewTab={true}
                 icon={<Github />}

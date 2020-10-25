@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.scss';
-import Button from '../../elements/Button/Button';
+import { Button } from '../../elements/Buttons/Buttons';
 
 import { ReactComponent as Portfolio } from '../../svg icons/portfolio-outline.svg';
 import { ReactComponent as PortfolioFill } from '../../svg icons/portfolio-fill.svg';
@@ -54,7 +54,7 @@ const Home = () => {
           </p>
           <div className="Home__button-wrapper">
             <Button
-              buttonText="portfolio"
+              title="portfolio"
               linkTo="#Portfolio"
               icon={<PortfolioFill />}
             />

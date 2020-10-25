@@ -27,7 +27,7 @@ const CV = () => {
       duration: 'sep 2019 - apr 2020',
       tech: 'Node, Express, React, MongoDB, HTML, CSS and more',
       description:
-        'A fast paced 13 week bootcamp turning hobby coders to complete fullstack JavaScript developers.',
+        'The School of Applied Technology is a fast paced 13 week bootcamp turning hobby coders to complete fullstack JavaScript developers.',
     },
     {
       employer: 'Qliro AB',

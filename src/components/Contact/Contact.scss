@@ -1,5 +1,99 @@
 @import '../../variables.scss';
 
 .Contact {
-  height: 100%;
+  position: relative;
+  height: 150vh;
+
+  p {
+    font-size: $paragraph-size;
+  }
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  h2 {
+    height: 50%;
+    margin-top: 30%;
+    padding: 5rem;
+  }
+
+  &__form {
+    position: absolute;
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+    width: 70%;
+    height: 40%;
+    left: 15%;
+    bottom: 5%;
+    padding: 5rem;
+    background: $container-color;
+
+    form {
+      display: grid;
+      grid: 1fr 1fr 1fr 3fr / 1fr;
+      gap: 2rem;
+
+      textarea {
+        resize: none;
+        outline: none;
+        border: 0.2rem solid $line-color;
+        border-radius: 1rem;
+        font-size: 2rem;
+        background: transparent;
+        padding: 1rem;
+      }
+    }
+  }
+
+  &__right-item {
+    display: grid;
+    grid: 2fr 1fr / 1fr;
+    gap: 2rem;
+
+    p {
+      text-align: right;
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid: 1fr 1fr / 1.4fr 1fr;
+    gap: 2rem;
+    align-items: center;
+
+    svg {
+      justify-self: end;
+      width: 5.3rem;
+      height: 5.3rem;
+      fill: $whisper;
+    }
+
+    span {
+      font-size: 2rem;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    height: 20vh;
+    padding: 5rem;
+    background: $horizon;
+
+    p {
+      font-size: 2.2rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $chardonnay;
+      font-weight: 400;
+    }
+  }
 }

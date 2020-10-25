@@ -48,7 +48,7 @@
       position: absolute;
       bottom: 47rem;
       right: 20rem;
-      fill: $whisper;
+      fill: $line-color;
     }
   }
 
@@ -62,7 +62,7 @@
     grid: 1fr / 1fr 1fr 1fr;
     gap: 2rem;
     padding: 4rem 0 2rem 0;
-    border-bottom: 0.2rem solid rgba(239, 236, 236, 0.7);
+    border-bottom: 0.2rem solid $line-color;
 
     div:nth-of-type(4),
     div:nth-of-type(5) {

@@ -1,8 +1,8 @@
 import React from 'react';
-import './Button.scss';
+import './Buttons.scss';
 
-const Button = ({
-  buttonText = '',
+export const Button = ({
+  title = '',
   linkTo = '#',
   openInNewTab = false,
   icon = null,
@@ -15,9 +15,16 @@ const Button = ({
       rel="noreferrer noopener"
     >
       {icon}
-      {buttonText}
+      {title}
     </a>
   );
 };
 
-export default Button;
+export const SubmitButton = ({ title = '', icon = null }) => {
+  return (
+    <button type="submit" className="Button">
+      {icon}
+      {title}
+    </button>
+  );
+};
