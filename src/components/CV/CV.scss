@@ -1,5 +1,65 @@
 @import '../../variables.scss';
 
 .CV {
-  height: 100%;
+  position: relative;
+  display: grid;
+  grid: 1fr / 1fr 1fr;
+  height: 200vh;
+
+  h2 {
+    height: 100vh;
+    padding: 5rem;
+  }
+
+  &__left-item,
+  &__right-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__left-item {
+    background: $horizon;
+  }
+
+  &__container {
+    position: absolute;
+    width: 70%;
+    height: 33%;
+    bottom: 35%;
+    left: 15%;
+    padding: 5rem;
+    background: $container-color;
+  }
+
+  &__right-item {
+    position: relative;
+
+    img {
+      position: absolute;
+      height: 100%;
+      width: 200%;
+      right: 0;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+
+  &__entries {
+    height: 100%;
+    overflow: auto;
+  }
+
+  &__entry {
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 4rem 0 2rem 0;
+    border-bottom: 0.2rem solid rgba(239, 236, 236, 0.7);
+
+    div:nth-of-type(4),
+    div:nth-of-type(5) {
+      grid-column-start: span 3;
+    }
+  }
 }

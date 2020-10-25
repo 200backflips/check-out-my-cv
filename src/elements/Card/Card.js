@@ -1,10 +1,11 @@
 import React from 'react';
 import './Card.scss';
+import TitleWithLabel from '../TitleWithLabel/TitleWithLabel';
 
 const Card = ({ projects }) => {
   return projects.map(({ img, project, tech, description, link }) => (
     <div className="Card" key={project}>
-      <img src={img} />
+      <img src={img} alt="thumbnail" />
       <a
         href={link}
         className="Card__link"
@@ -17,15 +18,6 @@ const Card = ({ projects }) => {
       </a>
     </div>
   ));
-};
-
-const TitleWithLabel = ({ title, value }) => {
-  return (
-    <div>
-      <span>{title}</span>
-      <p>{value}</p>
-    </div>
-  );
 };
 
 export default Card;

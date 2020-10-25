@@ -21,22 +21,8 @@
     border-radius: 1.5rem;
     padding: 4rem 3rem;
     background: rgba(0, 0, 0, 0.8);
-    color: $whisper;
     text-decoration: none;
     transition: ease-in-out 250ms;
-
-    span {
-      font-size: 1rem;
-    }
-
-    p {
-      font-size: 2rem;
-      font-weight: 500;
-    }
-
-    div:last-of-type {
-      grid-column-start: span 2;
-    }
   }
 }
 
