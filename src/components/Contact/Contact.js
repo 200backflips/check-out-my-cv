@@ -1,6 +1,7 @@
 import React from 'react';
 import './Contact.scss';
 import { SubmitButton } from '../../elements/Buttons/Buttons';
+import { ReactComponent as Email } from '../../svg icons/email.svg';
 import { ReactComponent as Linkedin } from '../../svg icons/linkedin-fill.svg';
 import { ReactComponent as Github } from '../../svg icons/github.svg';
 import TextInput from '../../elements/TextInput/TextInput';
@@ -16,7 +17,7 @@ const Contact = () => {
           <TextInput placeholder="email" />
           <TextInput placeholder="phone no." />
           <textarea placeholder="message" />
-          <SubmitButton title="send" />
+          <SubmitButton icon={<Email />} title="send" />
         </form>
         <div className="Contact__right-item">
           <div>

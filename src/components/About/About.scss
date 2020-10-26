@@ -15,23 +15,117 @@
   &__left-item {
     position: relative;
 
-    img {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      left: 0;
-      object-fit: cover;
-      z-index: -1;
+    h3 {
+      color: $chardonnay;
     }
+  }
+
+  &__bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
   }
 
   &__right-item {
     background: $horizon;
+
+    h4,
+    p {
+      letter-spacing: 1rem;
+    }
+
+    h4 {
+      font-weight: 400;
+    }
+
+    p {
+      padding-left: 1rem;
+    }
   }
 
   &__left-container,
   &__right-container {
+    display: grid;
+    grid: 1fr 2fr 1fr / 1fr;
     height: 100vh;
     padding: 5rem;
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  &__left-container {
+    h3 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__testimony {
+    display: grid;
+    grid: 1fr / 1fr;
+    gap: 2rem;
+
+    &--author {
+      display: grid;
+      grid: 1fr 1fr / 0.6fr 6fr;
+
+      img {
+        grid-row-start: span 2;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+
+    input {
+      appearance: none;
+      width: 2rem;
+      height: 2rem;
+      margin: 0 1rem;
+      border-radius: 100%;
+      border: 0.1rem solid $whisper;
+      cursor: pointer;
+
+      &:focus {
+        background: $whisper;
+      }
+    }
+  }
+
+  &__text {
+    display: grid;
+    grid: 1fr 2fr / 1fr;
+  }
+
+  &__skills {
+    display: grid;
+    grid: 1fr 1fr / 1fr 1fr;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__indent {
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (min-width: 50rem) {
+  .About {
+    &__button:hover {
+      background: $whisper;
+    }
   }
 }
