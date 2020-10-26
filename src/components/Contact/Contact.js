@@ -7,9 +7,9 @@ import TextInput from '../../elements/TextInput/TextInput';
 
 const Contact = () => {
   return (
-    <div className="Contact" id="Contact">
+    <div className="Contact">
       <img src="/bgphoto.jpg" alt="background" />
-      <h2>Contact</h2>
+      <h2 id="Contact">Contact</h2>
       <div className="Contact__form">
         <form>
           <TextInput placeholder="name" />
@@ -25,9 +25,21 @@ const Contact = () => {
             <p>out about whatever’s on your mind.</p>
           </div>
           <div className="Contact__links">
-            <Linkedin />
+            <a
+              href="https://www.linkedin.com/in/fredrik-karlsson-560563193/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <Linkedin />
+            </a>
             <span>fredrik-karlsson-560563193</span>
-            <Github />
+            <a
+              href="https://github.com/200backflips"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <Github />
+            </a>
             <span>200backflips</span>
           </div>
         </div>

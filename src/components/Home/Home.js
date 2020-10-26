@@ -26,20 +26,28 @@ const Home = () => {
         <img src="/bgphoto.jpg" alt="background" />
         <div className="Home__links">
           <a href="#Portfolio">
-            <Portfolio />
-            portfolio
+            <div className="Home__link">
+              <Portfolio />
+              <p>portfolio</p>
+            </div>
           </a>
           <a href="#CV">
-            <CV />
-            cv
+            <div className="Home__link">
+              <CV />
+              <p>cv</p>
+            </div>
           </a>
           <a href="#About">
-            <About />
-            about
+            <div className="Home__link">
+              <About />
+              <p>about</p>
+            </div>
           </a>
           <a href="#Contact">
-            <Contact />
-            contact
+            <div className="Home__link">
+              <Contact />
+              <p>contact</p>
+            </div>
           </a>
         </div>
         <div className="Home__introduction">

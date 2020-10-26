@@ -3,10 +3,10 @@ import './About.scss';
 
 const About = () => {
   return (
-    <div className="About" id="About">
+    <div className="About">
       <div className="About__left-item">
         <img src="/bgphoto.jpg" alt="background" />
-        <div className="About__left-container">
+        <div className="About__left-container" id="About">
           <h2>About</h2>
         </div>
       </div>
