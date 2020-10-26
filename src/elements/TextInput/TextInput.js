@@ -4,8 +4,8 @@ import './TextInput.scss';
 const TextInput = ({ placeholder = '' }) => {
   return (
     <div className="TextInput">
-      <span className="TextInput__floating-label">{placeholder}</span>
-      <input type="text" />
+      <input type="text" required />
+      <label>{placeholder}</label>
     </div>
   );
 };

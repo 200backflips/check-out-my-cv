@@ -47,6 +47,10 @@
         font-size: 2rem;
         background: transparent;
         padding: 1rem;
+
+        &::placeholder {
+          color: $line-color;
+        }
       }
     }
   }

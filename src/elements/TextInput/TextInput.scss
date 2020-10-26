@@ -2,29 +2,31 @@
 
 .TextInput {
   position: relative;
+}
 
-  input,
-  span {
-    font-size: 2rem;
-    color: $line-color;
-  }
+input,
+label {
+  font-size: 2rem;
+  color: $line-color;
+}
 
-  span {
-    display: block;
-    position: absolute;
-    transition: ease-in-out 100ms;
+input {
+  width: 100%;
+  padding: 0.5rem 0;
+  border: 0;
+  border-bottom: 0.2rem solid $line-color;
+  background: transparent;
+  outline: none;
+}
 
-    input:focus ~ & {
-      opacity: 0;
-    }
-  }
+label {
+  position: absolute;
+  left: 0;
+  transition: ease-in-out 100ms;
 
-  input {
-    width: 100%;
-    padding: 0.5rem 0;
-    border: 0;
-    border-bottom: 0.2rem solid $line-color;
-    background: transparent;
-    outline: none;
+  input:focus ~ &,
+  input:valid ~ & {
+    transform: translateY(-2rem);
+    font-size: 1.5rem;
   }
 }
