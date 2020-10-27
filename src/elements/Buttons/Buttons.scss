@@ -5,7 +5,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  // width: 100%;
+  min-width: 30rem;
+  max-height: 5.5rem;
   padding: 1rem 0;
   background: $horizon;
   text-decoration: none;

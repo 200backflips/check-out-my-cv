@@ -49,7 +49,7 @@
   &__left-container,
   &__right-container {
     display: grid;
-    grid: 1fr 2fr 1fr / 1fr;
+    grid: 15rem 35rem 30rem / 1fr;
     height: 100vh;
     padding: 5rem;
 
@@ -64,10 +64,25 @@
     }
   }
 
+  &__right-container {
+    position: relative;
+
+    svg {
+      position: absolute;
+      opacity: 0.05;
+      width: 90rem;
+      height: 90rem;
+      bottom: -10rem;
+      right: 0;
+    }
+  }
+
   &__testimony {
     display: grid;
     grid: 1fr / 1fr;
     gap: 2rem;
+    height: 22rem;
+    align-items: center;
 
     &--author {
       display: grid;
@@ -94,8 +109,12 @@
       border-radius: 100%;
       border: 0.1rem solid $whisper;
       cursor: pointer;
+      transition: ease-in-out 100ms;
 
-      &:focus {
+      &:hover,
+      &:focus,
+      &:active,
+      &:checked {
         background: $whisper;
       }
     }

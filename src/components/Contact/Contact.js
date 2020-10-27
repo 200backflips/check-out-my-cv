@@ -1,16 +1,18 @@
 import React from 'react';
 import './Contact.scss';
-import { SubmitButton } from '../../elements/Buttons/Buttons';
-import { ReactComponent as Email } from '../../svg icons/email.svg';
-import { ReactComponent as Linkedin } from '../../svg icons/linkedin-fill.svg';
-import { ReactComponent as Github } from '../../svg icons/github.svg';
 import TextInput from '../../elements/TextInput/TextInput';
+import { SubmitButton } from '../../elements/Buttons/Buttons';
+import { ReactComponent as Email } from '../../icons/email.svg';
+import { ReactComponent as Linkedin } from '../../icons/linkedin-fill.svg';
+import { ReactComponent as Github } from '../../icons/github.svg';
+import { ReactComponent as Monster } from '../../svg/monster5.svg';
 
 const Contact = () => {
   return (
     <div className="Contact">
       <img src="/bgphoto.jpg" alt="background" />
       <h2 id="Contact">Contact</h2>
+      <Monster className="Contact__monster" />
       <div className="Contact__form">
         <form>
           <TextInput placeholder="name" />

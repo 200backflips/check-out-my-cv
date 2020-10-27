@@ -1,7 +1,8 @@
 import React from 'react';
 import './CV.scss';
-import { ReactComponent as Monster } from '../../monster doodles/monster2.svg';
 import TitleWithLabel from '../../elements/TitleWithLabel/TitleWithLabel';
+import { ReactComponent as Monster } from '../../svg/monster2.svg';
+import { ReactComponent as Shapes } from '../../svg/shapes.svg';
 
 const CV = () => {
   const entries = [
@@ -42,6 +43,7 @@ const CV = () => {
     <div className="CV">
       <div className="CV__left-item">
         <h2 id="CV">CV</h2>
+        <Shapes />
       </div>
       <div className="CV__container">
         <div className="CV__entries">

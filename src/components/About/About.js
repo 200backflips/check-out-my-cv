@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './About.scss';
+import { ReactComponent as Head } from '../../svg/feggehead.svg';
 
 const About = () => {
   const [index, setIndex] = useState(0);
@@ -59,13 +60,15 @@ const About = () => {
                   type="radio"
                   name="testimonies"
                   value={0}
-                  onChange={e => setIndex(e.target.value)}
+                  onChange={e => setIndex(+e.target.value)}
+                  checked={index === 0}
                 />
                 <input
                   type="radio"
                   name="testimonies"
                   value={1}
-                  onChange={e => setIndex(e.target.value)}
+                  onChange={e => setIndex(+e.target.value)}
+                  checked={index === 1}
                 />
               </div>
             </div>
@@ -73,7 +76,7 @@ const About = () => {
         </div>
       </div>
       <div className="About__right-item">
-        <div className="About__left-container">
+        <div className="About__right-container">
           <h3>Skills</h3>
           <div className="About__skills">
             <div className="About__list">
@@ -102,6 +105,7 @@ const About = () => {
             <p>Scrum</p>
             <p>Kanban</p>
           </div>
+          <Head />
         </div>
       </div>
     </div>

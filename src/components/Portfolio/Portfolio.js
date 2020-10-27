@@ -7,11 +7,12 @@ import bookingmate from '../../projects/bookingmate.png';
 import wayofnorris from '../../projects/wayofnorris.png';
 import jakobfroden from '../../projects/jakobfroden.png';
 
-import { ReactComponent as Github } from '../../svg icons/github.svg';
-import { ReactComponent as Monster1 } from '../../monster doodles/monster1.svg';
-import { ReactComponent as Monster3 } from '../../monster doodles/monster3.svg';
-import { ReactComponent as Monster4 } from '../../monster doodles/monster4.svg';
-import { ReactComponent as Line } from '../../monster doodles/line5.svg';
+import { ReactComponent as Github } from '../../icons/github.svg';
+import { ReactComponent as Monster1 } from '../../svg/monster1.svg';
+import { ReactComponent as Monster3 } from '../../svg/monster3.svg';
+import { ReactComponent as Monster4 } from '../../svg/monster4.svg';
+import { ReactComponent as Line } from '../../svg/line5.svg';
+import { ReactComponent as Shapes } from '../../svg/shapes.svg';
 
 const Portfolio = () => {
   const projects = [
@@ -82,6 +83,7 @@ const Portfolio = () => {
           <div className="Portfolio__links">
             <Card projects={projects} />
           </div>
+          <Shapes />
         </div>
       </div>
     </div>

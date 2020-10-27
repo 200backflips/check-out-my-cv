@@ -11,24 +11,28 @@
     padding: 5rem;
   }
 
-  &__left-item,
-  &__right-item {
+  &__left-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  &__left-item {
     background: $horizon;
+
+    svg {
+      position: absolute;
+      bottom: 26rem;
+      opacity: 0.03;
+    }
   }
 
   &__container {
     position: absolute;
+    z-index: 2;
     width: 70%;
+    min-width: 54rem;
     height: 33%;
-    bottom: 35%;
+    bottom: 33%;
     left: 15%;
-    padding: 5rem;
+    padding: 5rem 0;
     background: $container-color;
   }
 
@@ -46,7 +50,7 @@
 
     svg {
       position: absolute;
-      bottom: 47rem;
+      bottom: 41rem;
       right: 20rem;
       fill: $line-color;
     }
@@ -54,6 +58,7 @@
 
   &__entries {
     height: 100%;
+    padding: 0 5rem;
     overflow: auto;
   }
 

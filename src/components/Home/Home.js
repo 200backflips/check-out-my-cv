@@ -2,11 +2,11 @@ import React from 'react';
 import './Home.scss';
 import { Button } from '../../elements/Buttons/Buttons';
 
-import { ReactComponent as Portfolio } from '../../svg icons/portfolio-outline.svg';
-import { ReactComponent as PortfolioFill } from '../../svg icons/portfolio-fill.svg';
-import { ReactComponent as CV } from '../../svg icons/cv.svg';
-import { ReactComponent as About } from '../../svg icons/info-outline.svg';
-import { ReactComponent as Contact } from '../../svg icons/contact.svg';
+import { ReactComponent as Portfolio } from '../../icons/portfolio-outline.svg';
+import { ReactComponent as PortfolioFill } from '../../icons/portfolio-fill.svg';
+import { ReactComponent as CV } from '../../icons/cv.svg';
+import { ReactComponent as About } from '../../icons/info-outline.svg';
+import { ReactComponent as Contact } from '../../icons/contact.svg';
 
 const Home = () => {
   return (
@@ -60,13 +60,11 @@ const Home = () => {
             </a>{' '}
             me.
           </p>
-          <div className="Home__button-wrapper">
-            <Button
-              title="portfolio"
-              linkTo="#Portfolio"
-              icon={<PortfolioFill />}
-            />
-          </div>
+          <Button
+            title="portfolio"
+            linkTo="#Portfolio"
+            icon={<PortfolioFill />}
+          />
         </div>
       </div>
     </div>

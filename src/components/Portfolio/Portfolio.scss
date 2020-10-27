@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 50vw;
   }
 
   &__left-item {
@@ -32,6 +33,10 @@
     }
   }
 
+  &__right-item {
+    background: $horizon;
+  }
+
   &__left-container,
   &__right-container {
     display: grid;
@@ -40,13 +45,17 @@
     padding: 5rem;
   }
 
-  &__right-item {
-    background: $horizon;
-  }
-
   &__right-container {
+    position: relative;
+
     p {
       font-size: 2.5rem;
+    }
+
+    svg {
+      position: absolute;
+      top: -5rem;
+      opacity: 0.03;
     }
   }
 
@@ -56,6 +65,8 @@
   }
 
   &__login-credentials {
+    z-index: 1;
+
     * {
       margin-bottom: 1rem;
     }
@@ -63,8 +74,9 @@
 
   &__links {
     display: grid;
-    grid: 0.25fr 0.25fr / 1fr 2fr;
+    grid: 1fr 1fr / repeat(auto-fill, 35rem);
     gap: 1rem;
+    z-index: 1;
   }
 
   &__monster-doodles {
@@ -76,7 +88,7 @@
 
       &:nth-of-type(1) {
         bottom: 8rem;
-        right: 5rem;
+        left: 68rem;
       }
       &:nth-of-type(2) {
         bottom: 10rem;
