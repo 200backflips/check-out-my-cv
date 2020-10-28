@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Portfolio.scss';
-import { Tween } from 'react-gsap';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import { Button } from '../../elements/Buttons/Buttons';
 import Card from '../../elements/Card/Card';
 
@@ -16,6 +18,8 @@ import { ReactComponent as Line } from '../../svg/line5.svg';
 import { ReactComponent as Shapes } from '../../svg/shapes.svg';
 
 const Portfolio = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   const projects = [
     {
       img: bookingmate,
@@ -40,34 +44,45 @@ const Portfolio = () => {
     },
   ];
 
+  useEffect(() => {
+    gsap.from('.Portfolio-introduction > p, .Portfolio__button-wrapper', {
+      scrollTrigger: '.Portfolio-introduction',
+      x: -540,
+      duration: 1,
+      stagger: 0.2,
+      ease: 'back.inOut(1.7)',
+    });
+
+    gsap.from('.Card, .Card > img', {
+      scrollTrigger: '.Portfolio-introduction',
+      scale: 0,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: 'power1.inOut',
+    });
+  }, []);
+
   return (
     <div className="Portfolio">
       <div className="Portfolio__left-item">
         <img src="/bgphoto.jpg" alt="background" />
         <div className="Portfolio__left-container" id="Portfolio">
           <h2>Portfolio</h2>
-          <div>
-            <Tween
-              from={{ x: -350 }}
-              duration={1}
-              stagger={0.2}
-              ease="power2.inOut"
-              immediateRender={false}
-            >
-              <p>
-                Check out a few of the projects that I’ve deployed. If you’re
-                interested in the code, it’s available on my Github profile
-                along with about a dozen other repositories.
-              </p>
-              <div className="Portfolio__button-wrapper">
-                <Button
-                  title="see all my repos"
-                  linkTo="https://github.com/200backflips"
-                  openInNewTab={true}
-                  icon={<Github />}
-                />
-              </div>
-            </Tween>
+          <div className="Portfolio-introduction">
+            <p>
+              Check out a few of the projects that I’ve deployed. If you’re
+              interested in the code, it’s available on my Github profile along
+              with about a dozen other repositories.
+            </p>
+            <div className="Portfolio__button-wrapper">
+              <Button
+                title="see all my repos"
+                linkTo="https://github.com/200backflips"
+                openInNewTab={true}
+                icon={<Github />}
+              />
+            </div>
           </div>
           <div className="Portfolio__monster-doodles">
             <Monster3 />

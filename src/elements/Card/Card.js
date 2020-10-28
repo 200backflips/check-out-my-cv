@@ -5,6 +5,7 @@ import TitleWithLabel from '../TitleWithLabel/TitleWithLabel';
 const Card = ({ img, project, tech, description, link }) => {
   return (
     <a href={link} className="Card" target="_blank" rel="noreferrer noopener">
+      <div className="Card__overlay" />
       <img src={img} alt="thumbnail" />
       <TitleWithLabel title="Project" value={project} />
       <TitleWithLabel title="Tech" value={tech} />

@@ -119,9 +119,11 @@
 
 @media only screen and (min-width: 50rem) {
   .Contact {
-    svg:hover {
-      transform: scale(1.2);
-      opacity: 0.7;
+    &__form {
+      svg:hover {
+        transform: scale(1.2);
+        opacity: 0.7;
+      }
     }
   }
 }
