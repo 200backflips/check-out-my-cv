@@ -74,7 +74,7 @@
 
   &__links {
     display: grid;
-    grid: 1fr 1fr / repeat(auto-fill, 35rem);
+    grid: 1fr 1fr / repeat(auto-fill, 30rem);
     gap: 1rem;
     z-index: 1;
   }
@@ -84,22 +84,23 @@
 
     svg {
       position: absolute;
+      transform: scale(0.7);
       fill: $line-color;
 
       &:nth-of-type(1) {
-        bottom: 8rem;
-        left: 68rem;
+        bottom: 10rem;
       }
       &:nth-of-type(2) {
-        bottom: 10rem;
-        left: 5rem;
+        bottom: 9rem;
+        left: 51rem;
       }
       &:nth-of-type(3) {
-        bottom: 30rem;
-        left: 40rem;
+        bottom: 25rem;
+        left: 32rem;
       }
       &:nth-of-type(4) {
-        bottom: 3rem;
+        bottom: 6.5rem;
+        left: -10rem;
         fill: none;
       }
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Portfolio.scss';
+import { Tween } from 'react-gsap';
 import { Button } from '../../elements/Buttons/Buttons';
 import Card from '../../elements/Card/Card';
 
@@ -46,23 +47,31 @@ const Portfolio = () => {
         <div className="Portfolio__left-container" id="Portfolio">
           <h2>Portfolio</h2>
           <div>
-            <p>
-              Check out a few of the projects that I’ve deployed. If you’re
-              interested in the code, it’s available on my Github profile along
-              with about a dozen other repositories.
-            </p>
-            <div className="Portfolio__button-wrapper">
-              <Button
-                title="see all my repos"
-                linkTo="https://github.com/200backflips"
-                openInNewTab={true}
-                icon={<Github />}
-              />
-            </div>
+            <Tween
+              from={{ x: -350 }}
+              duration={1}
+              stagger={0.2}
+              ease="power2.inOut"
+              immediateRender={false}
+            >
+              <p>
+                Check out a few of the projects that I’ve deployed. If you’re
+                interested in the code, it’s available on my Github profile
+                along with about a dozen other repositories.
+              </p>
+              <div className="Portfolio__button-wrapper">
+                <Button
+                  title="see all my repos"
+                  linkTo="https://github.com/200backflips"
+                  openInNewTab={true}
+                  icon={<Github />}
+                />
+              </div>
+            </Tween>
           </div>
           <div className="Portfolio__monster-doodles">
-            <Monster1 />
             <Monster3 />
+            <Monster1 />
             <Monster4 />
             <Line />
           </div>
@@ -81,7 +90,16 @@ const Portfolio = () => {
             </p>
           </div>
           <div className="Portfolio__links">
-            <Card projects={projects} />
+            {projects.map(({ img, project, tech, description, link }) => (
+              <Card
+                img={img}
+                project={project}
+                tech={tech}
+                description={description}
+                link={link}
+                key={project}
+              />
+            ))}
           </div>
           <Shapes />
         </div>
