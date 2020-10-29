@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './CV.scss';
+
 import TitleWithLabel from '../../elements/TitleWithLabel/TitleWithLabel';
 import { ReactComponent as Monster } from '../../svg/monster2.svg';
 import { ReactComponent as Shapes } from '../../svg/shapes.svg';
 
 const CV = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   const entries = [
     {
       employer: 'Oneflow',
@@ -39,6 +44,17 @@ const CV = () => {
         'Customer service in Norwegian, Swedish and Danish for a payment service/fintech company. Some customer data maintenance as well.',
     },
   ];
+
+  useEffect(() => {
+    gsap.from('.CV__left-item > h2, .CV__entry > .TitleWithLabel', {
+      scrollTrigger: '.CV__left-item > h2',
+      opacity: 0,
+      duration: 1,
+      stagger: 0.1,
+      ease: 'power2.inOut',
+    });
+  }, []);
+
   return (
     <div className="CV">
       <div className="CV__left-item">

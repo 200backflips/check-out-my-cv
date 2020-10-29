@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import './Portfolio.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import './Portfolio.scss';
 
 import { Button } from '../../elements/Buttons/Buttons';
 import Card from '../../elements/Card/Card';
@@ -45,21 +45,42 @@ const Portfolio = () => {
   ];
 
   useEffect(() => {
-    gsap.from('.Portfolio-introduction > p, .Portfolio__button-wrapper', {
-      scrollTrigger: '.Portfolio-introduction',
+    const tl = gsap.timeline({
+      defaults: {
+        scrollTrigger: '.Portfolio__left-container > h2',
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.inOut',
+      },
+    });
+
+    gsap.from('.Portfolio__introduction > p, .Portfolio__button-wrapper', {
+      scrollTrigger: '.Portfolio__introduction',
       x: -540,
-      duration: 1,
+      duration: 1.5,
       stagger: 0.2,
       ease: 'back.inOut(1.7)',
     });
 
     gsap.from('.Card, .Card > img', {
-      scrollTrigger: '.Portfolio-introduction',
+      scrollTrigger: '.Card',
       scale: 0,
       opacity: 0,
-      duration: 1,
+      duration: 0.5,
       stagger: 0.2,
       ease: 'power1.inOut',
+    });
+
+    tl.from('.Portfolio__left-container > h2', {}).from(
+      '.Portfolio__right-container > h3, .Portfolio__login-credentials',
+      {}
+    );
+
+    gsap.from('.Portfolio__monster-doodles', {
+      scrollTrigger: '.Portfolio__monster-doodles',
+      opacity: 0,
+      duration: 3,
+      ease: 'back.inOut(1.7)',
     });
   }, []);
 
@@ -69,7 +90,7 @@ const Portfolio = () => {
         <img src="/bgphoto.jpg" alt="background" />
         <div className="Portfolio__left-container" id="Portfolio">
           <h2>Portfolio</h2>
-          <div className="Portfolio-introduction">
+          <div className="Portfolio__introduction">
             <p>
               Check out a few of the projects that I’ve deployed. If you’re
               interested in the code, it’s available on my Github profile along

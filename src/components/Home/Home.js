@@ -18,7 +18,7 @@ const Home = () => {
   ];
 
   useEffect(() => {
-    const tl1 = gsap.timeline({
+    const tl = gsap.timeline({
       defaults: {
         opacity: 0,
         duration: 1,
@@ -26,11 +26,11 @@ const Home = () => {
       },
     });
 
-    tl1.from('.Home__title', {}).from('.Home__heading', {});
+    tl.from('.Home__title', {}).from('.Home__heading', {});
 
     gsap.from('.Home__introduction > p, .Home__button-wrapper', {
       x: 540,
-      duration: 1,
+      duration: 1.5,
       stagger: 0.2,
       ease: 'back.inOut(1.7)',
     });
