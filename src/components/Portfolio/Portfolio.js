@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { timeline, transition } from '../../animations';
 import './Portfolio.scss';
 
 import { Button } from '../../elements/Buttons/Buttons';
@@ -18,8 +17,6 @@ import { ReactComponent as Line } from '../../svg/line5.svg';
 import { ReactComponent as Shapes } from '../../svg/shapes.svg';
 
 const Portfolio = () => {
-  gsap.registerPlugin(ScrollTrigger);
-
   const projects = [
     {
       img: bookingmate,
@@ -45,43 +42,24 @@ const Portfolio = () => {
   ];
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      defaults: {
-        scrollTrigger: '.Portfolio__left-container > h2',
-        opacity: 0,
-        duration: 1,
-        ease: 'power2.inOut',
-      },
-    });
-
-    gsap.from('.Portfolio__introduction > p, .Portfolio__button-wrapper', {
-      scrollTrigger: '.Portfolio__introduction',
-      x: -540,
-      duration: 1.5,
-      stagger: 0.2,
-      ease: 'back.inOut(1.7)',
-    });
-
-    gsap.from('.Card, .Card > img', {
-      scrollTrigger: '.Card',
-      scale: 0,
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.2,
-      ease: 'power1.inOut',
-    });
+    const tl = timeline.opacity('.Portfolio__left-container > h2');
 
     tl.from('.Portfolio__left-container > h2', {}).from(
       '.Portfolio__right-container > h3, .Portfolio__login-credentials',
       {}
     );
 
-    gsap.from('.Portfolio__monster-doodles', {
-      scrollTrigger: '.Portfolio__monster-doodles',
-      opacity: 0,
-      duration: 3,
-      ease: 'back.inOut(1.7)',
-    });
+    transition.rightToLeft(
+      '.Portfolio__introduction > p, .Portfolio__button-wrapper',
+      '.Portfolio__introduction'
+    );
+
+    transition.scaleAndOpacityZero('.Card, .Card > img', '.Card');
+
+    transition.opacityZero(
+      '.Portfolio__monster-doodles',
+      '.Portfolio__monster-doodles'
+    );
   }, []);
 
   return (

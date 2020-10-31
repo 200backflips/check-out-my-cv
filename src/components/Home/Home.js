@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './Home.scss';
-import { gsap } from 'gsap';
+import { timeline, transition } from '../../animations';
 import { Button } from '../../elements/Buttons/Buttons';
 
 import { ReactComponent as Portfolio } from '../../icons/portfolio-outline.svg';
@@ -18,29 +18,12 @@ const Home = () => {
   ];
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      defaults: {
-        opacity: 0,
-        duration: 1,
-        ease: 'power2.inOut',
-      },
-    });
-
+    const tl = timeline.opacity();
     tl.from('.Home__title', {}).from('.Home__heading', {});
 
-    gsap.from('.Home__introduction > p, .Home__button-wrapper', {
-      x: 540,
-      duration: 1.5,
-      stagger: 0.2,
-      ease: 'back.inOut(1.7)',
-    });
+    transition.leftToRight('.Home__introduction > p, .Home__button-wrapper');
 
-    gsap.from('.Home__link > svg', {
-      scale: 0,
-      duration: 1,
-      stagger: 0.5,
-      ease: 'elastic.out(3, 1)',
-    });
+    transition.scaleZero('.Home__link > svg');
   }, []);
 
   return (
